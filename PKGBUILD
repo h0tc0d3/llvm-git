@@ -4,7 +4,7 @@ validpgpkeys=('33ED753E14757D79FA17E57DC4C1F715B2B66B95')
 
 pkgname=llvm-git
 pkgdesc="LLVM Toolchain with clang, clang-tools-extra, compiler-rt, openmp, polly, lldb, lld"
-pkgver=12.0.1_rc1+30+gf78f530bd384
+pkgver=12.0.1_rc3+0+gb7c7b42db1d1
 pkgrel=1
 arch=('x86_64')
 url="https://llvm.org/"
@@ -52,7 +52,7 @@ _build_bindings=0
 pkgver() {
 
   cd "${srcdir:?}/llvm-project" || (
-    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project build directory! PkgVer Failed! \E[0m"
+    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project directory! PkgVer Failed! \E[0m"
     exit 1
   )
 
@@ -75,7 +75,7 @@ pkgver() {
 prepare() {
 
   cd "${srcdir:?}/llvm-project" || (
-    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project build directory! Prepare Failed! \E[0m"
+    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project directory! Prepare Failed! \E[0m"
     exit 1
   )
 
@@ -89,7 +89,7 @@ prepare() {
 build() {
 
   cd "${srcdir:?}/llvm-project" || (
-    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project build directory! Build Failed! \E[0m"
+    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project directory! Build Failed! \E[0m"
     exit 1
   )
 
@@ -214,7 +214,7 @@ build() {
 check() {
 
   cd "${srcdir:?}/llvm-project" || (
-    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project/build build directory! Check Failed! \E[0m"
+    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project/build directory! Check Failed! \E[0m"
     exit 1
   )
 
@@ -244,7 +244,7 @@ _python3_optimize() {
 package() {
 
   cd "${srcdir:?}/llvm-project" || (
-    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project build directory! Package Failed! \E[0m"
+    echo -e "\E[1;31mCan't cd to ${srcdir}/llvm-project directory! Package Failed! \E[0m"
     exit 1
   )
 
